@@ -1,0 +1,19 @@
+site_name: Munity Unified API
+site_url: https://docs.munityapps.com
+repo_url: https://github.com/munityapps/unified-api-docs
+repo_name: Munity Unified API Documentation repository
+site_descroption: This documentation provide information to use Munity Unified API
+site_author: Cyril ALFARO
+copyright: GPL3
+remote_branch: gh-pages
+remote_name: origin
+
+theme: material
+
+nav:
+  - Home: index.md
+  - About: about.md
+
+docs_dir: docs
+site_dir: site
+
