@@ -14,7 +14,7 @@ nav:
   - Overview: index.md
   - Configure: configure.md
   - How to use : howtouse.md
-  - About: about.md
+  - API Reference: 'https://doc.munityapps.com'
 
 docs_dir: docs
 site_dir: site
