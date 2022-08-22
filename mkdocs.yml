@@ -11,7 +11,9 @@ remote_name: origin
 theme: material
 
 nav:
-  - Home: index.md
+  - Overview: index.md
+  - Configure: configure.md
+  - How to use : howtouse.md
   - About: about.md
 
 docs_dir: docs
