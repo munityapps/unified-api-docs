@@ -14,7 +14,7 @@ nav:
   - Overview: index.md
   - Configure: configure.md
   - How to use : howtouse.md
-  - API Reference: 'https://doc.munityapps.com'
+  - API Reference: 'https://app.swaggerhub.com/apis-docs/dbyzero/munity-unified_api/1.0.1'
 
 docs_dir: docs
 site_dir: site

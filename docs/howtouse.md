@@ -48,6 +48,6 @@ Exemple with CURL :
 
 You can access to our swagger to read all endpoint, how to implement it and what format are all responses :
 
-[Munity Unified API Swagger](https://app.swaggerhub.com/apis-docs/dbyzero/munity-unified_api/1.0.0)
+[Munity Unified API Swagger](https://app.swaggerhub.com/apis-docs/dbyzero/munity-unified_api/1.0.1)
 
 

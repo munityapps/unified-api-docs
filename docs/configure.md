@@ -10,7 +10,7 @@ You have to create your workspace and owner at [register page](https://app.munit
 
 Connectors need information to works correctly. There are three different ways to configure connectors.
 
-### Oauth2
+### Authenticate by Oauth2
 
 You have to generate a new application on remote service to connect your users through Oauth2.
 
@@ -18,11 +18,11 @@ Then your connector need your application `client_id` and `client_secret`.
 
 ![jira connector exemple](./assets/jira_connector_exemple.png)
 
-### API Key
+### Authenticate by API Key
 
 You have to generate an API Key on remote service and copy paste it on your connector.
 
-### User credentials
+### Authenticate by User credentials
 
 Some remote service need your user/password to provide there data.
 
