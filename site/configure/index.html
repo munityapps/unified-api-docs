@@ -338,10 +338,57 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          How to use
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="How to use" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          How to use
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../howtouse/" class="md-nav__link">
-        How to use
+      <a href="../howtousefrontend/" class="md-nav__link">
+        Get user data access
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howtousebackend/" class="md-nav__link">
+        Interact with user data
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -354,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="https://app.swaggerhub.com/apis-docs/dbyzero/munity-unified_api/1.0.1" class="md-nav__link">
+      <a href="https://app.swaggerhub.com/apis-docs/dbyzero/munity-unified_api/" class="md-nav__link">
         API Reference
       </a>
     </li>
@@ -501,14 +548,9 @@
 </code></pre>
 <h3 id="for-your-frontend-certificate">For your frontend : <strong>Certificate</strong></h3>
 <p>Certificate is used to communicate from your frontend to Unified API. Indeed frontends are not secured so we have to encrypt exchanges.</p>
-<p>The single moment when you want to communicate with our API from your front is when you ask for user credentials.</p>
-<p>Our SDK already provide function to generate this link based on :</p>
-<ul>
-<li>your internal customer id</li>
-<li>your workspace id</li>
-<li>name of the connector wanted</li>
-</ul>
-<p>In next section we will show you how to generate this link to be sure that you are the initiator of the process.</p>
+<p>The only time to communicate with our API from your frontend is when you ask for user credentials.</p>
+<p>Our frontend librarie will make it easier, you only have to provide your <code>connector type</code> and <code>secret</code>.</p>
+<p>In next section we will check how to use frontend lib and use it.</p>
 
 
 
@@ -543,13 +585,13 @@
       
       
         
-        <a href="../howtouse/" class="md-footer__link md-footer__link--next" aria-label="Next: How to use" rel="next">
+        <a href="../howtousefrontend/" class="md-footer__link md-footer__link--next" aria-label="Next: Get user data access" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              How to use
+              Get user data access
             </div>
           </div>
           <div class="md-footer__button md-icon">
