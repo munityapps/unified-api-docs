@@ -13,8 +13,10 @@ theme: material
 nav:
   - Overview: index.md
   - Configure: configure.md
-  - How to use : howtouse.md
-  - API Reference: 'https://app.swaggerhub.com/apis-docs/dbyzero/munity-unified_api/1.0.1'
+  - How to use : 
+    - Get user data access: howtousefrontend.md
+    - Interact with user data: howtousebackend.md
+  - API Reference: 'https://app.swaggerhub.com/apis-docs/dbyzero/munity-unified_api/'
 
 docs_dir: docs
 site_dir: site

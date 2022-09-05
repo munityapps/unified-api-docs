@@ -50,12 +50,8 @@ Exemple with CURL :
 
 Certificate is used to communicate from your frontend to Unified API. Indeed frontends are not secured so we have to encrypt exchanges.
 
-The single moment when you want to communicate with our API from your front is when you ask for user credentials.
+The only time to communicate with our API from your frontend is when you ask for user credentials.
 
-Our SDK already provide function to generate this link based on :
+Our frontend librarie will make it easier, you only have to provide your `connector type` and `secret`.
 
-* your internal customer id
-* your workspace id
-* name of the connector wanted
-
-In next section we will show you how to generate this link to be sure that you are the initiator of the process.
+In next section we will check how to use frontend lib and use it.
