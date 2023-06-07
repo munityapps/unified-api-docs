@@ -18,6 +18,7 @@ nav:
     - Get access to your customer data: howtousebackend.md
   - API Reference: 'https://app.swaggerhub.com/apis-docs/dbyzero/munity-unified_api/'
   - Webhook Reference: webhooks.md
+  - About: about.md
 
 docs_dir: docs
 site_dir: site
