@@ -52,6 +52,6 @@ Certificate is used to communicate from your frontend to Unified API. Indeed fro
 
 The only time to communicate with our API from your frontend is when you ask for user credentials.
 
-Our frontend librarie will make it easier, you only have to provide your `connector type` and `secret`.
+Our frontend library will make it easier, you only have to provide your `connector`, `secret` and a way to wait data, callback or promise.
 
 In next section we will check how to use frontend lib and use it.

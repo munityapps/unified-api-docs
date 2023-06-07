@@ -2,27 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.munityapps.com/</loc>
-         <lastmod>2022-09-05</lastmod>
+         <lastmod>2023-06-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.munityapps.com/about/</loc>
-         <lastmod>2022-09-05</lastmod>
+         <lastmod>2023-06-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.munityapps.com/configure/</loc>
-         <lastmod>2022-09-05</lastmod>
+         <lastmod>2023-06-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.munityapps.com/howtousebackend/</loc>
-         <lastmod>2022-09-05</lastmod>
+         <lastmod>2023-06-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.munityapps.com/howtousefrontend/</loc>
-         <lastmod>2022-09-05</lastmod>
+         <lastmod>2023-06-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.munityapps.com/todo/</loc>
+         <lastmod>2023-06-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.munityapps.com/webhooks/</loc>
+         <lastmod>2023-06-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

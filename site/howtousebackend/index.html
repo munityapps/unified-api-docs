@@ -12,22 +12,25 @@
       
         <link rel="canonical" href="https://docs.munityapps.com/howtousebackend/">
       
+      
+        <link rel="prev" href="../howtousefrontend/">
+      
+      
+        <link rel="next" href="../webhooks/">
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.0">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
-        <title>Interact with user data - Munity Unified API</title>
+        <title>Get access to your customer data - Munity Unified API</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.69437709.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
-        
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
       
       
+
     
     
     
@@ -46,17 +49,15 @@
 
     
     
+    
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -64,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-use-backend-interact-with-your-customer-data" class="md-skip">
+        <a href="#get-acces-to-your-customer-data" class="md-skip">
           Skip to content
         </a>
       
@@ -76,7 +77,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Munity Unified API" class="md-header__button md-logo" aria-label="Munity Unified API" data-md-component="logo">
       
@@ -97,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Interact with user data
+              Get access to your customer data
             
           </span>
         </div>
@@ -120,7 +123,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -132,7 +135,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -144,7 +147,7 @@
         <a href="https://github.com/munityapps/unified-api-docs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     Munity Unified API Documentation repository
@@ -189,7 +192,7 @@
       <a href="https://github.com/munityapps/unified-api-docs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     Munity Unified API Documentation repository
@@ -242,17 +245,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           How to use
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="How to use" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           How to use
@@ -266,7 +270,7 @@
   
     <li class="md-nav__item">
       <a href="../howtousefrontend/" class="md-nav__link">
-        Get user data access
+        Use munity frontend SDK
       </a>
     </li>
   
@@ -282,15 +286,87 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Get access to your customer data
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Interact with user data
+        Get access to your customer data
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-get-data-through-our-api" class="md-nav__link">
+    API : Get data through our API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhook-getting-alert-on-your-customer-data" class="md-nav__link">
+    WEBHOOK : Getting alert on your customer data
+  </a>
+  
+    <nav class="md-nav" aria-label="WEBHOOK : Getting alert on your customer data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration_new_data_model" class="md-nav__link">
+    integration_new_data_model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration_updated_data_model" class="md-nav__link">
+    integration_updated_data_model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration_deleted_data_model" class="md-nav__link">
+    integration_deleted_data_model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-get-data-directly-inside-database" class="md-nav__link">
+    DATABASE : Get data directly inside database
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -318,6 +394,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhooks/" class="md-nav__link">
+        Webhook Reference
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -338,25 +429,82 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-get-data-through-our-api" class="md-nav__link">
+    API : Get data through our API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhook-getting-alert-on-your-customer-data" class="md-nav__link">
+    WEBHOOK : Getting alert on your customer data
+  </a>
+  
+    <nav class="md-nav" aria-label="WEBHOOK : Getting alert on your customer data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration_new_data_model" class="md-nav__link">
+    integration_new_data_model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration_updated_data_model" class="md-nav__link">
+    integration_updated_data_model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration_deleted_data_model" class="md-nav__link">
+    integration_deleted_data_model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-get-data-directly-inside-database" class="md-nav__link">
+    DATABASE : Get data directly inside database
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-  <a href="https://github.com/munityapps/unified-api-docs/edit/master/docs/howtousebackend.md" title="Edit this page" class="md-content__button md-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+                  
+
+  
+  
 
 
-
-<h1 id="how-to-use-backend-interact-with-your-customer-data">How to use Backend : Interact with your customer data</h1>
+<h1 id="get-acces-to-your-customer-data">Get acces to your customer data</h1>
+<h2 id="api-get-data-through-our-api">API : Get data through our API</h2>
 <p>To communicate with API you need an API Key that you can manage on munity unified API website.</p>
-<p>You can find your api keys in <a href="https://app.munityapps.com/admin">your user admin page</a>.</p>
+<p>You can find your api keys in <a href="https://app.munityapps.com/security">your security page</a>.</p>
 <p><img alt="api_cert" src="../assets/api_cert.png" /></p>
 <p>This api key will be used on the Authorization header:</p>
 <pre><code>Authorization: Api-Key &lt;YOUR-API-KEY&gt;
@@ -366,40 +514,53 @@
 </code></pre>
 <p>You can access to our swagger to read all endpoint, how to implement it and what format are all responses :</p>
 <p><a href="https://app.swaggerhub.com/apis-docs/dbyzero/munity-unified_api">Munity Unified API Swagger</a></p>
+<h2 id="webhook-getting-alert-on-your-customer-data">WEBHOOK : Getting alert on your customer data</h2>
+<p>Munity can keep you updated for all your customer. Provide one endpoints and all your user data flow will be send to you.</p>
+<p>You can add a webhook url here : <a href="https://app.munityapps.com/security">your security page</a>.</p>
+<h3 id="integration_new_data_model">integration_new_data_model</h3>
+<p>Payload :</p>
+<pre><code>payload={
+    &quot;id&quot;: self.id, // &lt;- the integration id from where model is comming from
+    &quot;resource_id&quot;: id, // &lt;- the new id for the resource
+    &quot;type&quot;: modal_name, // &lt;- the kind of resource, it depends on your data mapping
+},
+</code></pre>
+<h3 id="integration_updated_data_model">integration_updated_data_model</h3>
+<p>Payload :</p>
+<pre><code>payload={
+    &quot;id&quot;: self.id, // &lt;- the integration id from where model is comming from
+    &quot;resource_id&quot;: id, // &lt;- the new id for the resource
+    &quot;type&quot;: modal_name, // &lt;- the kind of resource, it depends on your data mapping
+    &quot;diff&quot;: diff, // &lt;- A json that show differences from old and new model
+    &quot;data&quot;: data, // &lt;- Full data of the updated data model
+},
+</code></pre>
+<h3 id="integration_deleted_data_model">integration_deleted_data_model</h3>
+<p>Payload :</p>
+<pre><code>payload={
+    &quot;id&quot;: self.id, // &lt;- the integration id from where model is deleted from
+    &quot;resource_id&quot;: id, // &lt;- the id for the resource deleted
+    &quot;type&quot;: modal_name, // &lt;- the kind of resource, it depends on your data mapping
+},
+</code></pre>
+<h2 id="database-get-data-directly-inside-database">DATABASE : Get data directly inside database</h2>
+<p>You can also directly connect to your customer data here : <a href="https://app.munityapps.com/customers">Customer page</a>.</p>
+<p>And click on <code>Show DB credentials</code>.</p>
 
 
 
 
-              
-            </article>
-            
-          </div>
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../howtousefrontend/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Get user data access" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Get user data access
-            </div>
-          </div>
-        </a>
-      
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -426,10 +587,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
       
     
   </body>

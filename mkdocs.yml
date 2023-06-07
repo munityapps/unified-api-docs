@@ -14,9 +14,10 @@ nav:
   - Overview: index.md
   - Configure: configure.md
   - How to use : 
-    - Get user data access: howtousefrontend.md
-    - Interact with user data: howtousebackend.md
+    - Use munity frontend SDK: howtousefrontend.md
+    - Get access to your customer data: howtousebackend.md
   - API Reference: 'https://app.swaggerhub.com/apis-docs/dbyzero/munity-unified_api/'
+  - Webhook Reference: webhooks.md
 
 docs_dir: docs
 site_dir: site
