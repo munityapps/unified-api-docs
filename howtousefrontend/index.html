@@ -573,7 +573,7 @@ secret = jwt.encode({&quot;customer_id&quot;: &quot;customer_1234&quot;,&quot;wo
 <h3 id="-callback-optional">- <code>callback</code> <em>(optional)</em></h3>
 <p>The callback will be triggered when the connected integration sends a new event. The first parameter of the callback is a payload, and its value is:</p>
 <pre><code>    { 
-        &quot;type&quot;:  //&lt;-- can be 'error', 'READY' or 'SYNCHED'.
+        &quot;type&quot;:  //&lt;-- can be 'error', 'READY' or 'IMPORT_DONE'.
         &quot;message&quot;:  //&lt;-- associated message if needed, useful for errors.
     }
 </code></pre>
