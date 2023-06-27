@@ -345,6 +345,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#how-to-restore-a-broken-integration-renew-credentials" class="md-nav__link">
+    How to restore a broken integration (renew credentials)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -493,6 +500,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#how-to-restore-a-broken-integration-renew-credentials" class="md-nav__link">
+    How to restore a broken integration (renew credentials)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -529,7 +543,7 @@
 const promise = connect( connector, secret, callback)
 </code></pre>
 <p>Typescript:</p>
-<pre><code class="language-javacript">import { connect } from @munityapps/frontend
+<pre><code class="language-javacript">import { connect } from @munityapps/sdk-frontend
 
 const promise:Promise&lt;boolean&gt; = connect(
   connector: string,
@@ -590,6 +604,10 @@ secret = jwt.encode({&quot;customer_id&quot;: &quot;customer_1234&quot;,&quot;wo
 }
 
 handleConnect();
+</code></pre>
+<h3 id="how-to-restore-a-broken-integration-renew-credentials">How to restore a broken integration (renew credentials)</h3>
+<p>There is an other fields that you can add in secret generation to specify that you want to update an integration credentials.</p>
+<pre><code>secret = jwt.encode({&quot;customer_id&quot;: &quot;customer_1234&quot;,&quot;workspace_id&quot;: &quot;11111111-2222-3333-aaaa-eeeeeeeeeeee&quot;, &quot;integration_id&quot;: &quot;old_uuid&quot;}, certificate, algorithm=&quot;RS256&quot;)
 </code></pre>
 
 

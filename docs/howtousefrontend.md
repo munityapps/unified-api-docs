@@ -21,7 +21,7 @@ const promise = connect( connector, secret, callback)
 
 Typescript:
 ```javacript
-import { connect } from @munityapps/frontend
+import { connect } from @munityapps/sdk-frontend
 
 const promise:Promise<boolean> = connect(
   connector: string,
@@ -100,4 +100,12 @@ async function handleConnect() {
 }
 
 handleConnect();
+```
+
+### How to restore a broken integration (renew credentials)
+
+There is an other fields that you can add in secret generation to specify that you want to update an integration credentials.
+
+```
+secret = jwt.encode({"customer_id": "customer_1234","workspace_id": "11111111-2222-3333-aaaa-eeeeeeeeeeee", "integration_id": "old_uuid"}, certificate, algorithm="RS256")
 ```
