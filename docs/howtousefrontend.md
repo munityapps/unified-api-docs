@@ -7,14 +7,14 @@ We take care of the security so you don't have to store these credentials and we
 ## Install frontend library
 
 ```
-npm install @munityapps/frontend
+npm install @munityapps/sdk-frontend
 ```
 
 ## Use frontend library to connect users
 
 Javascript :
 ```javascript
-import { connect } from @munityapps/frontend
+import { connect } from @munityapps/sdk-frontend
 
 const promise = connect( connector, secret, callback)
 ```
