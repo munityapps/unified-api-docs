@@ -60,7 +60,7 @@ It's a JWT encoded with RS256 using your certificate provided by Munity. Your ce
 The callback will be triggered when the connected integration sends a new event. The first parameter of the callback is a payload, and its value is:
 ```
     { 
-        "type":  //<-- can be 'error', 'READY' or 'INSTALLED'.
+        "type":  //<-- can be 'error', 'READY' or 'IMPORT_DONE'.
         "message":  //<-- associated message if needed, useful for errors.
     }
 ``` 
