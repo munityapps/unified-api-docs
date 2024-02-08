@@ -405,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="https://app.swaggerhub.com/apis-docs/dbyzero/munity-unified_api/" class="md-nav__link">
+      <a href="https://app.swaggerhub.com/apis-docs/CYRIL_8/munity-unified_api/" class="md-nav__link">
         API Reference
       </a>
     </li>
@@ -573,7 +573,7 @@
 <h3 id="for-your-backend-api-key">For your backend : <strong>API Key</strong></h3>
 <p>To fetch your customer data and interact with unified API from your <strong>backend</strong> your need an API Key.</p>
 <p>API Key are linked to your user and workspace. If your user has admin privilege it can read and write data. Users with user privilege can only read data.</p>
-<p>To generate an API Key go to <a href="https://app.munityapps.com/admin">your user admin page</a>.</p>
+<p>To generate an API Key go to <a href="https://app.munityapps.com/">your user admin page</a> click on triple dot button of your workspace then choose <strong>manage api keys</strong>.</p>
 <p>This api key will be used as following on your request on munity unified API :</p>
 <pre><code>Authorization: X-Api-Key &lt;YOUR-API-KEY&gt;
 </code></pre>
@@ -581,6 +581,7 @@
 <pre><code>curl -X GET 'https://api.munityapps.com/v1/customers/f87cc67d-b594-4407-a90d-b26cfdae8f14/pm-projects/' -H 'Authorization: X-Api-Key REM0aW39.NfO0123456789CNeHpF29wo'
 </code></pre>
 <h3 id="for-your-frontend-certificate">For your frontend : <strong>Certificate</strong></h3>
+<p>You can generate your certificate in Workspace Settings modal. Click on triple dot button of your workspace then you can generate it.</p>
 <p>Certificate is used to communicate from your frontend to Unified API. Indeed frontends are not secured so we have to encrypt exchanges.</p>
 <p>The only time to communicate with our API from your frontend is when you ask for user credentials.</p>
 <p>Our frontend library will make it easier, you only have to provide your <code>connector</code>, <code>secret</code> and a way to wait data, callback or promise.</p>

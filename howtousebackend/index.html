@@ -328,33 +328,6 @@
     WEBHOOK : Getting alert on your customer data
   </a>
   
-    <nav class="md-nav" aria-label="WEBHOOK : Getting alert on your customer data">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#integration_new_data_model" class="md-nav__link">
-    integration_new_data_model
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#integration_updated_data_model" class="md-nav__link">
-    integration_updated_data_model
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#integration_deleted_data_model" class="md-nav__link">
-    integration_deleted_data_model
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -387,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="https://app.swaggerhub.com/apis-docs/dbyzero/munity-unified_api/" class="md-nav__link">
+      <a href="https://app.swaggerhub.com/apis-docs/CYRIL_8/munity-unified_api/" class="md-nav__link">
         API Reference
       </a>
     </li>
@@ -462,33 +435,6 @@
     WEBHOOK : Getting alert on your customer data
   </a>
   
-    <nav class="md-nav" aria-label="WEBHOOK : Getting alert on your customer data">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#integration_new_data_model" class="md-nav__link">
-    integration_new_data_model
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#integration_updated_data_model" class="md-nav__link">
-    integration_updated_data_model
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#integration_deleted_data_model" class="md-nav__link">
-    integration_deleted_data_model
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -520,7 +466,7 @@
 <h2 id="api-get-data-through-our-api">API : Get data through our API</h2>
 <p>To communicate with API you need an API Key that you can manage on munity unified API website.</p>
 <p>You can find your api keys in <a href="https://app.munityapps.com/security">your security page</a>.</p>
-<p><img alt="api_cert" src="../assets/api_cert.png" /></p>
+<p><img alt="api_cert" src="../assets/api.png" /></p>
 <p>This api key will be used on the Authorization header:</p>
 <pre><code>Authorization: Api-Key &lt;YOUR-API-KEY&gt;
 </code></pre>
@@ -531,36 +477,12 @@
 <p><a href="https://app.swaggerhub.com/apis-docs/dbyzero/munity-unified_api">Munity Unified API Swagger</a></p>
 <h2 id="webhook-getting-alert-on-your-customer-data">WEBHOOK : Getting alert on your customer data</h2>
 <p>Munity can keep you updated for all your customer. Provide one endpoints and all your user data flow will be send to you.</p>
-<p>You can add a webhook url here : <a href="https://app.munityapps.com/security">your security page</a>.</p>
-<h3 id="integration_new_data_model">integration_new_data_model</h3>
-<p>Payload :</p>
-<pre><code>payload={
-    &quot;id&quot;: self.id, // &lt;- the integration id from where model is comming from
-    &quot;resource_id&quot;: id, // &lt;- the new id for the resource
-    &quot;type&quot;: modal_name, // &lt;- the kind of resource, it depends on your data mapping
-},
-</code></pre>
-<h3 id="integration_updated_data_model">integration_updated_data_model</h3>
-<p>Payload :</p>
-<pre><code>payload={
-    &quot;id&quot;: self.id, // &lt;- the integration id from where model is comming from
-    &quot;resource_id&quot;: id, // &lt;- the new id for the resource
-    &quot;type&quot;: modal_name, // &lt;- the kind of resource, it depends on your data mapping
-    &quot;diff&quot;: diff, // &lt;- A json that show differences from old and new model
-    &quot;data&quot;: data, // &lt;- Full data of the updated data model
-},
-</code></pre>
-<h3 id="integration_deleted_data_model">integration_deleted_data_model</h3>
-<p>Payload :</p>
-<pre><code>payload={
-    &quot;id&quot;: self.id, // &lt;- the integration id from where model is deleted from
-    &quot;resource_id&quot;: id, // &lt;- the id for the resource deleted
-    &quot;type&quot;: modal_name, // &lt;- the kind of resource, it depends on your data mapping
-},
-</code></pre>
+<p>You can add a webhook url in your dataspace settings :</p>
+<p><img alt="dataspace" src="../assets/dataspace_settings.png" /></p>
+<p>Webhook list are available here : <a href="/webhooks">Webhook Reference</a></p>
 <h2 id="database-get-data-directly-inside-database">DATABASE : Get data directly inside database</h2>
-<p>You can also directly connect to your customer data here : <a href="https://app.munityapps.com/customers">Customer page</a>.</p>
-<p>And click on <code>Show DB credentials</code>.</p>
+<p>You can also directly connect to your customer data here by connecting to there database. You can have access to there DB credential in your dataspaces :</p>
+<p><img alt="DB Credentials" src="../assets/db_creds.png" /></p>
 
 
 
