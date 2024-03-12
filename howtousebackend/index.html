@@ -23,7 +23,7 @@
     
     
       
-        <title>Get access to your customer data - Munity Unified API</title>
+        <title>Access data - Munity Unified API</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#get-acces-to-your-customer-data" class="md-skip">
+        <a href="#access-your-customer-data" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Get access to your customer data
+              Access data
             
           </span>
         </div>
@@ -225,8 +225,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../configure/" class="md-nav__link">
-        Configure
+      <a href="../getting-started/" class="md-nav__link">
+        Getting started
       </a>
     </li>
   
@@ -252,14 +252,14 @@
       
       
         <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-          How to use
+          How to
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          How to use
+          How to
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -270,7 +270,7 @@
   
     <li class="md-nav__item">
       <a href="../howtousefrontend/" class="md-nav__link">
-        Use munity frontend SDK
+        Use frontend SDK
       </a>
     </li>
   
@@ -293,12 +293,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Get access to your customer data
+          Access data
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Get access to your customer data
+        Access data
       </a>
       
         
@@ -317,8 +317,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#api-get-data-through-our-api" class="md-nav__link">
-    API : Get data through our API
+  <a href="#api-retrieve-data-via-our-api" class="md-nav__link">
+    API: Retrieve Data via Our API
   </a>
   
 </li>
@@ -424,8 +424,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#api-get-data-through-our-api" class="md-nav__link">
-    API : Get data through our API
+  <a href="#api-retrieve-data-via-our-api" class="md-nav__link">
+    API: Retrieve Data via Our API
   </a>
   
 </li>
@@ -462,27 +462,25 @@
   
 
 
-<h1 id="get-acces-to-your-customer-data">Get acces to your customer data</h1>
-<h2 id="api-get-data-through-our-api">API : Get data through our API</h2>
-<p>To communicate with API you need an API Key that you can manage on munity unified API website.</p>
-<p>You can find your api keys in <a href="https://app.munityapps.com/security">your security page</a>.</p>
-<p><img alt="api_cert" src="../assets/api.png" /></p>
-<p>This api key will be used on the Authorization header:</p>
+<h1 id="access-your-customer-data">Access your customer data</h1>
+<h2 id="api-retrieve-data-via-our-api">API: Retrieve Data via Our API</h2>
+<p>To interact with our API, you'll need an API Key, which can be managed on the Munity Unified API website.</p>
+<p>You can find your API keys on workspace settings.</p>
+<p><a href="../assets/api.png">API Manage</a></p>
+<p>This API key should be included in the Authorization header:</p>
 <pre><code>Authorization: Api-Key &lt;YOUR-API-KEY&gt;
 </code></pre>
-<p>Exemple with CURL :</p>
-<pre><code>curl -X GET 'https://api.munityapps.com/v1/customers/f87cc67d-b594-4407-a90d-b26cfdae8f14/pm-projects/' -H 'Authorization: Api-Key REM0aW39.NfO0123456789CNeHpF29wo'
+<p>Example using CURL:</p>
+<pre><code>curl -X GET 'https://api.munityapps.com/v1/customers/f87cc67d-b594-4407-a90d-b26cfdae8f14/pm-projects/' -H 'Authorization: Api-Key YOUR_ACTUAL_API_KEY_HERE'
 </code></pre>
-<p>You can access to our swagger to read all endpoint, how to implement it and what format are all responses :</p>
-<p><a href="https://app.swaggerhub.com/apis-docs/dbyzero/munity-unified_api">Munity Unified API Swagger</a></p>
+<p>Access our Swagger documentation to view all endpoints, implementation methods, and response formats:</p>
+<p><a href="https://app.swaggerhub.com/apis-docs/dbyzero/munity-unified_api">Munity Unified API Swagger Documentation</a></p>
 <h2 id="webhook-getting-alert-on-your-customer-data">WEBHOOK : Getting alert on your customer data</h2>
 <p>Munity can keep you updated for all your customer. Provide one endpoints and all your user data flow will be send to you.</p>
-<p>You can add a webhook url in your dataspace settings :</p>
-<p><img alt="dataspace" src="../assets/dataspace_settings.png" /></p>
+<p>You can add a webhook url in your marketplace settings :</p>
 <p>Webhook list are available here : <a href="/webhooks">Webhook Reference</a></p>
 <h2 id="database-get-data-directly-inside-database">DATABASE : Get data directly inside database</h2>
-<p>You can also directly connect to your customer data here by connecting to there database. You can have access to there DB credential in your dataspaces :</p>
-<p><img alt="DB Credentials" src="../assets/db_creds.png" /></p>
+<p>You can also directly connect to your customer's company data here by connecting to there database. You can have access to there DB credential in your marketplace.</p>
 
 
 
