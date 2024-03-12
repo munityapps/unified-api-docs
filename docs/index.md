@@ -1,32 +1,40 @@
 # Overview
 
-Our goal with Munity is to **make third part integration easiest** as possible.
+Our mission at Munity is to **facilitate seamless third-party integrations**, prioritizing ease of use without sacrificing security. To this end, we adhere to stringent security standards, ensuring the protection of your customer data with technologies like Vault, Django Rest Framework (DRF), Kubernetes, Transport Layer Security (TLS), and more.
 
-But we **don't want to trade simplicity to security**. So we are based on strong security standards to keep your customer data safe as Vault, DRF, Kubernetes, TLS and more.
+At the core of our architecture lies Airbyte open source ELT, enabling us to offer a wide array of connectors right out of the box. This component is securely encapsulated, preventing any external access and ensuring a high level of security.
 
-To get many connectors out of the box we have **Airbyte** deep in our architecture, it is closed and **nobody can access it from outside**.
 
-## Single interface
+## Single Interface for Comprehensive Management
 
-With your API Key you can fetch your customer data, manage your account, ask user authorization and activate new connectors.
+Utilize your API key to effortlessly:
+
+- Retrieve customer data
+- Manage your account settings
+- Request user authorizations
+- Activate new connectors
+
+This streamlined approach ensures you have all the tools necessary for efficient management in one place.
 
 ![overview schema](./assets/overview.png)
 
-## Credential management
+## Credential Management: Secure and Hassle-Free
 
-Your customer credentials are stored in Vault and cannot be access without a strong accreditation. We manage this security for you and renew tokens when needed.
+We take the security of your customer credentials seriously. Stored securely in Vault, access is tightly controlled and requires strong authentication. Our system automatically handles the security, including token renewals, so you don't have to worry about it.
 
 ![vault](./assets/vault.png)
 
-## Connector family
+## Connector Family: Simplifying Integration Across Services
 
-To reach simplicity we bring togethere similar API on a single model.
+Our platform simplifies the integration process by grouping similar APIs into a single model, making it easier for you to connect with various services. This approach allows for a one-time integration with access to a wide range of similar connectors.
 
-### Exemple :
+### Examples include:
 
-* Project management : Jira, Wrike, Asana, Trello, Clickup....
-* E-commerce : Shopify, Magento, Prestashop...
+- E-commerce/ERP (e.g., Prestashop, Shopify, WooCommerce...)
+- CRM/VoIP (e.g., HubSpot, Salesforce, Zoho, Twilio...)
+- Project management (e.g., Jira, Asana, Monday...)
+- HRIS (e.g., Lucca, Factorial, Bamboo HR...)
 
-**Integrate once and get similar connectors in second.**
+### Integrate once, and gain access to a multitude of similar connectors instantly, streamlining your workflow and enhancing efficiency.
 
-![connector](./assets/connector.png)
+![connector](./assets/airsaas.webp)

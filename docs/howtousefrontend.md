@@ -1,8 +1,8 @@
-# How to use on frontend : get your customer data access
+# Use frontend SDK
 
-Since you want you customer data, you need that your customer grant access.
+Since you desire access to your customer's company data, it's necessary for your customer to grant permission.
 
-We take care of the security so you don't have to store these credentials and we also manage the [Oauth2 dance](https://en.wikipedia.org/wiki/OAuth) for you.
+We handle security measures, eliminating the need for you to store these credentials. Additionally, we manage the OAuth2 authentication process on your behalf.
 
 ## Install frontend library
 
@@ -11,6 +11,8 @@ npm install @munityapps/sdk-frontend
 ```
 
 ## Use frontend library to connect users
+
+To request credentials from your users, you should call the connect function provided by the Munity SDK.
 
 Javascript :
 ```javascript
@@ -31,33 +33,57 @@ const promise:Promise<boolean> = connect(
 )
 ```
 
+The parameters are detailed below.
+
 ### - `connector` :
-It's a slug referring your connector (ex: `jira`).
+
+> Please specify the connector's name (e.g., jira) to refer to your particular connector.
+
 ### - `secret` : 
 
-Here a snippet to generate your `secret` in python:
-
+> To generate your secret key, utilize the Python snippet provided below. This script uses the jwt library to encode a JSON Web Token (JWT) with the RS256 algorithm, leveraging a certificate provided by Munity.
+> 
 ```python
 import jwt
 
-# Certificate provided by Munity
+# Munity-provided certificate
 certificate = "-----BEGIN PRIVATE KEY-----[...]-----END PRIVATE KEY-----\n"
 
-secret = jwt.encode({"customer_id": "customer_1234","workspace_id": "11111111-2222-3333-aaaa-eeeeeeeeeeee", "name": "optional name"}, certificate, algorithm="RS256")
-
+# Generate the secret
+secret = jwt.encode({
+    "customer_id": "customer_1234",
+    "workspace_id": "11111111-2222-3333-aaaa-eeeeeeeeeeee",
+    "name": "optional name"  # This field is optional
+}, certificate, algorithm="RS256")
 ```
+> 
+> You will find the necessary certificate within your workspace settings, as illustrated below:
+> 
+> ![api_cert](./assets/api_cert.png)
+> 
+> This secret key is a JWT, encoded using the RS256 algorithm and your Munity-provided certificate. You can retrieve your certificate from the admin page. When encoding your JWT, you need to include the workspace_id and customer_id. Optionally, you can also specify a name for the connector. The details for these parameters are as follows:
+> 
+> - workspace_id: This is the unique identifier for your workspace on Munity. You can locate this ID on the admin page.
+> - customer_id: This identifier is used internally to reference the customer. It should only contain letters and numbers.
+> - name (optional): This parameter allows you to specify a name for the integration, which can be useful for display purposes on your frontend UI.
 
-You can find your certificate in [your security page](https://app.munityapps.com/security).
 
-![api_cert](./assets/api_cert.png)
 
-It's a JWT encoded with RS256 using your certificate provided by Munity. Your cetificate can be find here : [admin page](https://app.munityapps.com/admin). You need to provide `workspace_id` and `customer_id` and optionaly the name of the connector in a json format. 
-    - `workspace_id` is the ID of your workspace on Munity, you can find it here : [admin page](https://app.munityapps.com/admin).
-    - `customer_id` is your internal id that you will use to find back the customer. It can contains letter and numbers only.
-    - *(optional)* `name`: a name to show the integration on your frontend for UI purpose.
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### - `callback` *(optional)* 
-The callback will be triggered when the connected integration sends a new event. The first parameter of the callback is a payload, and its value is:
+> The callback function is optionally invoked when the connected integration emits a new event. The function receives a payload as its first parameter, structured as follows:
 ```
     { 
         "type":  //<-- can be 'error', 'READY' or 'IMPORT_DONE'.
@@ -67,11 +93,11 @@ The callback will be triggered when the connected integration sends a new event.
 
 ### - `promise` return by connect function
 
-The function will return a Promise<boolean>, indicating that it will resolve with a boolean value (true) when the integration is ready, or reject with an error object if any error occurs.
-
-To handle the promise, you can use methods like .then() and .catch() or async/await syntax.
-
-Here's an example using .then() and .catch():
+> The connect function returns a Promise<boolean>. This promise resolves with a boolean value (true) once the integration is successfully ready, or it rejects with an error object in case of failure.
+> 
+> To manage the promise, you can employ .then() and .catch() methods or the async/await syntax.
+> 
+> Using .then() and .catch():
 
 ```javascript
 connect(connectorValue, secretValue, cbValue, configValue)
@@ -85,7 +111,7 @@ connect(connectorValue, secretValue, cbValue, configValue)
   });
 ```
 
-You can also use async/await syntax to handle the promise:
+> Handling with async/await Syntax:
 
 ```javascript
 async function handleConnect() {
@@ -102,10 +128,16 @@ async function handleConnect() {
 handleConnect();
 ```
 
-### How to restore a broken integration (renew credentials)
+### Renewing Credentials for a Broken Integration
 
-There is an other fields that you can add in secret generation to specify that you want to update an integration credentials.
+To update the credentials of an existing integration, you can include an additional field in your secret generation process. This field, integration_id, should contain the UUID of the integration you wish to update:
 
-```
-secret = jwt.encode({"customer_id": "customer_1234","workspace_id": "11111111-2222-3333-aaaa-eeeeeeeeeeee", "integration_id": "old_uuid"}, certificate, algorithm="RS256")
-```
+````js
+secret = jwt.encode({
+    "customer_id": "customer_1234",
+    "workspace_id": "11111111-2222-3333-aaaa-eeeeeeeeeeee",
+    "integration_id": "old_uuid"  // Specify the integration to update
+}, certificate, algorithm="RS256")
+````
+
+This approach allows for seamless updating of integration credentials, ensuring continuous operation without manual intervention.

@@ -12,13 +12,12 @@ theme: material
 
 nav:
   - Overview: index.md
-  - Configure: configure.md
-  - How to use : 
-    - Use munity frontend SDK: howtousefrontend.md
-    - Get access to your customer data: howtousebackend.md
-  - API Reference: 'https://app.swaggerhub.com/apis-docs/dbyzero/munity-unified_api/'
+  - Getting started: getting-started.md
+  - How to : 
+    - Use frontend SDK: howtousefrontend.md
+    - Access data : howtousebackend.md
+  - API Reference: 'https://app.swaggerhub.com/apis-docs/CYRIL_8/munity-unified_api/'
   - Webhook Reference: webhooks.md
-  - About: about.md
 
 docs_dir: docs
 site_dir: site

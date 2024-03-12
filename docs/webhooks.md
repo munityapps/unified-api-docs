@@ -14,6 +14,15 @@ All webhook as following payload :
 }
 ```
 
+## webhook_test
+
+Payload :
+```
+payload={
+    "test": true
+}
+```
+
 ## integration_new_data_model
 
 Payload :

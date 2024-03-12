@@ -16,8 +16,6 @@
         <link rel="prev" href="../howtousebackend/">
       
       
-        <link rel="next" href="../about/">
-      
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
@@ -65,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#integration_new_data_model" class="md-skip">
+        <a href="#webhook_test" class="md-skip">
           Skip to content
         </a>
       
@@ -225,8 +223,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../configure/" class="md-nav__link">
-        Configure
+      <a href="../getting-started/" class="md-nav__link">
+        Getting started
       </a>
     </li>
   
@@ -250,14 +248,14 @@
       
       
         <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-          How to use
+          How to
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          How to use
+          How to
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -268,7 +266,7 @@
   
     <li class="md-nav__item">
       <a href="../howtousefrontend/" class="md-nav__link">
-        Use munity frontend SDK
+        Use frontend SDK
       </a>
     </li>
   
@@ -282,7 +280,7 @@
   
     <li class="md-nav__item">
       <a href="../howtousebackend/" class="md-nav__link">
-        Get access to your customer data
+        Access data
       </a>
     </li>
   
@@ -303,7 +301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="https://app.swaggerhub.com/apis-docs/dbyzero/munity-unified_api/" class="md-nav__link">
+      <a href="https://app.swaggerhub.com/apis-docs/CYRIL_8/munity-unified_api/" class="md-nav__link">
         API Reference
       </a>
     </li>
@@ -346,6 +344,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#webhook_test" class="md-nav__link">
+    webhook_test
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#integration_new_data_model" class="md-nav__link">
@@ -404,21 +409,6 @@
   
 
     
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
-        About
-      </a>
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -442,6 +432,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#webhook_test" class="md-nav__link">
+    webhook_test
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#integration_new_data_model" class="md-nav__link">
@@ -521,6 +518,12 @@
     event=&quot;event_type_name&quot; // &lt;- there few different kind of event all listed below
     state=&quot;integration_state&quot;, // &lt;- your integration state provided durring to connect function, usefull to know which connection has been correctly made. Prevent creation collision. 
     payload={&quot;id&quot;: self.id}, // &lt;- a payload dedicated to this event
+}
+</code></pre>
+<h2 id="webhook_test">webhook_test</h2>
+<p>Payload :</p>
+<pre><code>payload={
+    &quot;test&quot;: true
 }
 </code></pre>
 <h2 id="integration_new_data_model">integration_new_data_model</h2>
