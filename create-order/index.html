@@ -12,8 +12,10 @@
         <meta name="author" content="Cyril ALFARO">
       
       
-        <link rel="canonical" href="https://docs.munityapps.com/about/">
+        <link rel="canonical" href="https://docs.munityapps.com/create-order/">
       
+      
+        <link rel="prev" href="../webhooks/">
       
       
       
@@ -22,7 +24,7 @@
     
     
       
-        <title>About - Munity Unified API</title>
+        <title>Create Order - Munity Unified API</title>
       
     
     
@@ -63,11 +65,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#about" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -100,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              About
+              Create Order
             
           </span>
         </div>
@@ -378,10 +375,17 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../create-order/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -390,6 +394,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -411,8 +416,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -430,12 +433,38 @@
   
 
 
-<h1 id="about">About</h1>
-<p>Website : https://munityapps.com
-Discord : https://discord.gg/aY7sBn6wAJ</p>
-<p>Cyril ALFARO : cyril_at_munityapps.com
-Marisella PACHECO : marisella_at_munityapps.com
-Martin Perreau : martin_at_munityapps.com</p>
+  <h1>Create Order</h1>
+
+<p>For your Ecommerce integrations, you can create orders.</p>
+<p>You can send the paylod to this endpoint:</p>
+<pre><code class="language-txt">https://api.munityapps.com/v1/customers/{CUTOMER_ID}/ecommerce-order/
+</code></pre>
+<p>Payload:</p>
+<pre><code class="language-json">{
+    &quot;integration_id&quot;:&quot;The id of the integration&quot;,
+    &quot;products&quot;:[
+        //
+        {
+            &quot;id&quot;:&quot;the product's id&quot;, 
+            &quot;quantity&quot;:&quot;the quantity bought&quot;, 
+            &quot;variation&quot;:&quot;Optional: the variation of the product&quot;
+        }
+        //
+    ],
+    &quot;customer&quot;:{
+        &quot;firstname&quot;:&quot;The customer's first name&quot;,
+        &quot;lastname&quot;:&quot;The customer's last name&quot;,
+        &quot;email&quot;:&quot;The customer's email&quot;
+    },
+    &quot;address&quot;:{
+        &quot;address1&quot;:&quot;customer's Address&quot;,
+        &quot;address2&quot;:&quot;&quot;,
+        &quot;country&quot;:&quot;&quot;,
+        &quot;city&quot;:&quot;&quot;,
+        &quot;postcode&quot;:&quot;&quot;
+    }
+}
+</code></pre>
 
 
 
