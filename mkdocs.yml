@@ -2,7 +2,7 @@ site_name: Munity Unified API
 site_url: https://docs.munityapps.com
 repo_url: https://github.com/munityapps/unified-api-docs
 repo_name: Munity Unified API Documentation repository
-site_descroption: This documentation provide information to use Munity Unified API
+site_description: This documentation provide information to use Munity Unified API
 site_author: Cyril ALFARO
 copyright: GPL3
 remote_branch: gh-pages
@@ -18,7 +18,7 @@ nav:
     - Access data : howtousebackend.md
   - API Reference: 'https://app.swaggerhub.com/apis-docs/CYRIL_8/munity-unified_api/'
   - Webhook Reference: webhooks.md
+  - Create Order: create-order.md
 
 docs_dir: docs
 site_dir: site
-
